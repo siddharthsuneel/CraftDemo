@@ -50,7 +50,7 @@
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="55" id="pX8-jO-x7u">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CreditScoreCell" rowHeight="55" id="pX8-jO-x7u" customClass="CreditScoreCell" customModule="CraftDemo_iOS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="600" width="375" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pX8-jO-x7u" id="jsv-Z6-edS">
@@ -92,12 +92,16 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="colorStripView" destination="d4o-4O-B1c" id="B4q-zc-lde"/>
-                                            <outlet property="percentageLbl" destination="J07-bO-12h" id="FID-f2-PLQ"/>
-                                            <outlet property="rangeLbl" destination="daO-et-HjX" id="FIa-t0-w97"/>
+                                            <outlet property="colorStripView" destination="d4o-4O-B1c" id="MSr-8z-FrB"/>
+                                            <outlet property="percentageLbl" destination="J07-bO-12h" id="omt-Nc-qRL"/>
+                                            <outlet property="rangeLbl" destination="daO-et-HjX" id="svB-uU-mhS"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="PfY-ep-cjy"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="IOa-wA-bEa"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -30,11 +30,13 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CreditScoreCell") as! CreditScoreCell
+        cell.setDataInCell(rangeModel: CreditRangeModel(), score: 820)
+        return cell
     }
 }
 
