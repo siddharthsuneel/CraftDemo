@@ -25,7 +25,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zdM-1F-hSo">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zdM-1F-hSo" customClass="SSCircularView" customModule="CraftDemo_iOS" customModuleProvider="target">
                                             <rect key="frame" x="62.5" y="50" width="250" height="250"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wmT-hr-wnq">
@@ -42,6 +42,9 @@
                                                 <constraint firstItem="wmT-hr-wnq" firstAttribute="centerY" secondItem="zdM-1F-hSo" secondAttribute="centerY" id="Tyj-Rl-YT5"/>
                                                 <constraint firstAttribute="width" secondItem="zdM-1F-hSo" secondAttribute="height" multiplier="1:1" id="WUv-Sh-qe9"/>
                                             </constraints>
+                                            <connections>
+                                                <outlet property="centerLbl" destination="wmT-hr-wnq" id="YF4-Vc-IAi"/>
+                                            </connections>
                                         </view>
                                     </subviews>
                                     <constraints>
@@ -114,6 +117,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="headerCircularView" destination="zdM-1F-hSo" id="9PV-qR-R6V"/>
                         <outlet property="tblView" destination="d7a-ix-ljU" id="uXd-pA-jy8"/>
                     </connections>
                 </viewController>

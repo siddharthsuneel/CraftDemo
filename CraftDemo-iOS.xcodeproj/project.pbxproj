@@ -16,6 +16,9 @@
 		2B44656C24193188001258B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B44656A24193188001258B5 /* AppDelegate.swift */; };
 		2B44656E241931B1001258B5 /* CreditModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B44656D241931B1001258B5 /* CreditModel.swift */; };
 		2B44657024193408001258B5 /* CreditScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B44656F24193408001258B5 /* CreditScoreCell.swift */; };
+		2B4465722419357A001258B5 /* SSCircularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4465712419357A001258B5 /* SSCircularView.swift */; };
+		2B446574241943D7001258B5 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B446573241943D7001258B5 /* Enums.swift */; };
+		2B44657624194464001258B5 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B44657524194464001258B5 /* Utility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		2B44656A24193188001258B5 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B44656D241931B1001258B5 /* CreditModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditModel.swift; sourceTree = "<group>"; };
 		2B44656F24193408001258B5 /* CreditScoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditScoreCell.swift; sourceTree = "<group>"; };
+		2B4465712419357A001258B5 /* SSCircularView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSCircularView.swift; sourceTree = "<group>"; };
+		2B446573241943D7001258B5 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		2B44657524194464001258B5 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +143,7 @@
 		2B44655E24192B5B001258B5 /* LibraryComponent */ = {
 			isa = PBXGroup;
 			children = (
+				2B4465712419357A001258B5 /* SSCircularView.swift */,
 			);
 			path = LibraryComponent;
 			sourceTree = "<group>";
@@ -144,6 +151,8 @@
 		2B446560241930D5001258B5 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				2B446573241943D7001258B5 /* Enums.swift */,
+				2B44657524194464001258B5 /* Utility.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -318,9 +327,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B44657624194464001258B5 /* Utility.swift in Sources */,
 				2B44656C24193188001258B5 /* AppDelegate.swift in Sources */,
 				2B44656B24193188001258B5 /* ViewController.swift in Sources */,
 				2B44656E241931B1001258B5 /* CreditModel.swift in Sources */,
+				2B4465722419357A001258B5 /* SSCircularView.swift in Sources */,
+				2B446574241943D7001258B5 /* Enums.swift in Sources */,
 				2B44657024193408001258B5 /* CreditScoreCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
