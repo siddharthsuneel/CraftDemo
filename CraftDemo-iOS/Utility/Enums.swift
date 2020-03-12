@@ -14,3 +14,8 @@ enum ArcPosition {
     case top
     case right
 }
+
+enum ViewModelObservationState {
+    case success
+    case showError(message: String)    
+}

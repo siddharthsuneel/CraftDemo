@@ -29,6 +29,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        DataManager().getData { (model, success, error) in
+            
+        }
+        
         setup()
     }
     
@@ -62,3 +66,44 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
+class ViewModel {
+    
+    //Vairables
+    private let serviceHandler = DataManager()
+    private var model: CreditModel?
+    
+    //Closures
+    var observer: (_ refreshState: ViewModelObservationState) -> Void = {_ in }
+    
+    func fetchData() {
+        serviceHandler.getData { [weak self] (model, success, error) in
+            guard let `self` = self else { return }
+            guard success else {
+                self.observer(.showError(message: "Failed to fetch data from server."))
+                return
+            }
+            
+            guard let modelData = model else {
+                self.observer(.showError(message: "Error while fetching data"))
+                return
+            }
+            self.model = modelData
+            self.observer(.success)
+        }
+    }
+}
+
+class DataManager {
+    func getData(completion: @escaping (CreditModel?, Bool, Error?) -> ()) {
+        if let data = JSONManager.readJSONData(fromFile: "response") {
+            do {
+                let model = try JSONDecoder().decode(CreditModel.self, from: data)
+                print(model)
+                completion(model, true, nil)
+            } catch let error {
+                print(error)
+                completion(nil, false, error)
+            }
+        }
+    }
+}

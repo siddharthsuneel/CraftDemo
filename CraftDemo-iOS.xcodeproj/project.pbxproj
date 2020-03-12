@@ -19,6 +19,8 @@
 		2B4465722419357A001258B5 /* SSCircularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4465712419357A001258B5 /* SSCircularView.swift */; };
 		2B446574241943D7001258B5 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B446573241943D7001258B5 /* Enums.swift */; };
 		2B44657624194464001258B5 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B44657524194464001258B5 /* Utility.swift */; };
+		2B44657824195B05001258B5 /* response.json in Resources */ = {isa = PBXBuildFile; fileRef = 2B44657724195B05001258B5 /* response.json */; };
+		2B44657A24195BA5001258B5 /* JSONManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B44657924195BA5001258B5 /* JSONManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		2B4465712419357A001258B5 /* SSCircularView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSCircularView.swift; sourceTree = "<group>"; };
 		2B446573241943D7001258B5 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		2B44657524194464001258B5 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		2B44657724195B05001258B5 /* response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = response.json; sourceTree = "<group>"; };
+		2B44657924195BA5001258B5 /* JSONManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +157,7 @@
 			children = (
 				2B446573241943D7001258B5 /* Enums.swift */,
 				2B44657524194464001258B5 /* Utility.swift */,
+				2B44657924195BA5001258B5 /* JSONManager.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -160,6 +165,7 @@
 		2B446561241930D5001258B5 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
+				2B44657724195B05001258B5 /* response.json */,
 			);
 			path = JSON;
 			sourceTree = "<group>";
@@ -300,6 +306,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B44657824195B05001258B5 /* response.json in Resources */,
 				2B44653924192AD8001258B5 /* LaunchScreen.storyboard in Resources */,
 				2B44653624192AD8001258B5 /* Assets.xcassets in Resources */,
 				2B44653424192AD6001258B5 /* Main.storyboard in Resources */,
@@ -328,6 +335,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B44657624194464001258B5 /* Utility.swift in Sources */,
+				2B44657A24195BA5001258B5 /* JSONManager.swift in Sources */,
 				2B44656C24193188001258B5 /* AppDelegate.swift in Sources */,
 				2B44656B24193188001258B5 /* ViewController.swift in Sources */,
 				2B44656E241931B1001258B5 /* CreditModel.swift in Sources */,

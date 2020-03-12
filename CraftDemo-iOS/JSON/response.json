@@ -1,0 +1,36 @@
+{
+    "score": 600,
+    "start": "300",
+    "end": "900",
+    "date": "",
+    "ranges": [{
+        "percentage": "19",
+        "startRange": 300,
+        "endRange": 699,
+        "hex": "#123456"
+    },
+    {
+        "percentage": "21",
+        "startRange": 700,
+        "endRange": 774,
+        "hex": "#123456"
+    },
+    {
+        "percentage": "21",
+        "startRange": 775,
+        "endRange": 799,
+        "hex": "#123456"
+    },
+    {
+        "percentage": "20",
+        "startRange": 800,
+        "endRange": 824,
+        "hex": "#123456"
+    },
+    {
+        "percentage": "19",
+        "startRange": 825,
+        "endRange": 900,
+        "hex": "#123456"
+    }]
+}
