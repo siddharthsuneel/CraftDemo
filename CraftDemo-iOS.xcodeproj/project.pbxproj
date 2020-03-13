@@ -24,6 +24,7 @@
 		2B44657C241B5668001258B5 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B44657B241B5668001258B5 /* ViewModel.swift */; };
 		2B44657E241B568C001258B5 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B44657D241B568C001258B5 /* DataManager.swift */; };
 		2B446580241B56B4001258B5 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B44657F241B56B4001258B5 /* Protocols.swift */; };
+		482917C8241C238C005DCE35 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482917C7241C238C005DCE35 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		2B44657B241B5668001258B5 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		2B44657D241B568C001258B5 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		2B44657F241B56B4001258B5 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		482917C7241C238C005DCE35 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 				2B44657924195BA5001258B5 /* JSONManager.swift */,
 				2B44657D241B568C001258B5 /* DataManager.swift */,
 				2B44657F241B56B4001258B5 /* Protocols.swift */,
+				482917C7241C238C005DCE35 /* Extensions.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 				2B44657A24195BA5001258B5 /* JSONManager.swift in Sources */,
 				2B44656C24193188001258B5 /* AppDelegate.swift in Sources */,
 				2B44656B24193188001258B5 /* ViewController.swift in Sources */,
+				482917C8241C238C005DCE35 /* Extensions.swift in Sources */,
 				2B44656E241931B1001258B5 /* CreditModel.swift in Sources */,
 				2B4465722419357A001258B5 /* SSCircularView.swift in Sources */,
 				2B446574241943D7001258B5 /* Enums.swift in Sources */,

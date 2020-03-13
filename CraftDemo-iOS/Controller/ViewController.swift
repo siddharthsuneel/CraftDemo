@@ -21,11 +21,7 @@ class ViewController: UIViewController {
     
     //Variables
     private var viewModel = ViewModel()
-    private var preference = Preferences() {
-        didSet {
-            print("New value for prefernces")
-        }
-    }
+    private var preference = Preferences()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,10 +31,11 @@ class ViewController: UIViewController {
     
     private func setup() {
         setPreferences()
+        addDataObserver()
         viewModel.fetchData()
     }
     
-    private func fetchData() {
+    private func addDataObserver() {
         viewModel.observer = { [weak self] state in
             switch state {
             case .success:
@@ -53,10 +50,12 @@ class ViewController: UIViewController {
     }
     
     private func setPreferences() {
-        preference.data.centerText = "600"
-        preference.data.startText = "s300"
-        preference.data.endText = "e900"
-        preference.data.score = 600
+        if let score = viewModel.getScore() {
+            preference.data.centerText = "\(Int(score))"
+            preference.data.score = score
+        }
+        preference.data.startText = "300"
+        preference.data.endText = "900"
         
         headerCircularView.updatePreference(preference)
     }

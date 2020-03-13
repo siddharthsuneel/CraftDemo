@@ -20,8 +20,8 @@ struct CreditModel: Codable {
 
 struct CreditRangeModel: Codable {
     var percentage: String?
-    var startRange: Double?
-    var endRange: Double?
+    var startRange: Int?
+    var endRange: Int?
     var hex: String?
     
     func getRangeText() -> String {
@@ -32,6 +32,9 @@ struct CreditRangeModel: Codable {
     }
     
     func getColor() -> UIColor {
+        if let hexString = hex {
+            return UIColor.hexStringToUIColor(hex: hexString)
+        }
         return UIColor.yellow
     }
 }

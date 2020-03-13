@@ -33,7 +33,9 @@ class CreditScoreCell: UITableViewCell {
     }
     
     func setDataInCell(rangeModel: CreditRangeModel, score: Double) {
-        percentageLbl.text = rangeModel.percentage
+        if let percentage = rangeModel.percentage {
+            percentageLbl.text = percentage + "%"
+        }
         rangeLbl.text = rangeModel.getRangeText()
         colorStripView.backgroundColor = rangeModel.getColor()
         
@@ -42,10 +44,48 @@ class CreditScoreCell: UITableViewCell {
     
     func drawArrowShapeIfNeeded(rangeModel: CreditRangeModel, score: Double) {
         if let start = rangeModel.startRange,
-            let end = rangeModel.endRange, score > start && score < end {
+            let end = rangeModel.endRange, Int(score) > start && Int(score) < end {
             //draw shape layer
             arrowView.isHidden = false
-            scoreLbl.text = "\(score)"
+            scoreLbl.text = "\(Int(score))"
+            
+            //Check if arrow tip is already there.
+            arrowView.layer.sublayers?.forEach({ layer in
+                if layer.name == "ArrowTip" {
+                    arrowView.removeFromSuperview()
+                }
+            })
+            
+            let height = frame.size.height
+            let width = frame.size.width
+            let tipSize: CGFloat = 30.0
+            let path = CGMutablePath()
+
+            path.move(to: CGPoint(x: tipSize, y: 0))
+            path.addLine(to: CGPoint(x: 0, y: height/2))
+            path.addLine(to: CGPoint(x: tipSize, y: height))
+            path.addLine(to: CGPoint(x: width, y: height))
+            path.addLine(to: CGPoint(x: width, y: 0))
+            path.addLine(to: CGPoint(x: tipSize, y:0))
+            
+            let shape = CAShapeLayer()
+            shape.path = path
+            shape.name = "ArrowTip"
+            shape.fillColor = UIColor.white.cgColor
+            arrowView.layer.insertSublayer(shape, at: 0)
+            
+            let shadowPath = CGMutablePath()
+
+            shadowPath.move(to: CGPoint(x: tipSize + 15, y: 15))
+            shadowPath.addLine(to: CGPoint(x: tipSize + 15, y: height + 15))
+            shadowPath.addLine(to: CGPoint(x: width + 15, y: height + 15))
+            shadowPath.addLine(to: CGPoint(x: width + 15, y: 15))
+            shadowPath.addLine(to: CGPoint(x: tipSize + 15, y: 15))
+
+            let shadowShape = CAShapeLayer()
+            shadowShape.path = shadowPath
+            shadowShape.fillColor = UIColor.gray.withAlphaComponent(0.3).cgColor
+            arrowView.layer.insertSublayer(shadowShape, at: 0)
         }
     }
 }

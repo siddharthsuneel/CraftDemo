@@ -13,6 +13,8 @@ struct Preferences {
     
     struct Drawing {
         var center                  = CGPoint.zero
+        var centerTextFontColor     = UIColor(red: 218.0 / 255, green: 180.0 / 255, blue: 93.0 / 255, alpha: 1.0)
+        var centerTextFontSize      = UIFont.boldSystemFont(ofSize: 26.0)
         var foregroundStrokeColor   = UIColor.red
         var trackStrokeColor        = UIColor.gray.withAlphaComponent(0.2)
         var lineWidth               = CGFloat(10)

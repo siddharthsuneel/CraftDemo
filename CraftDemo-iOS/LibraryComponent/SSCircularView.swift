@@ -10,15 +10,10 @@ import UIKit
 
 class SSCircularView: UIView {
     
-    @IBOutlet weak var centerLbl: UILabel!
-    
-    private var globalPreferences: Preferences = Preferences() {
-        didSet {
-            //Redraw
-        }
-    }
+    private var globalPreferences: Preferences = Preferences()
     let shapeLayer = CAShapeLayer()
     
+    var centerLbl = UILabel(frame: .zero)
     var startLbl = UILabel(frame: .zero)
     var endLbl = UILabel(frame: .zero)
     
@@ -64,27 +59,32 @@ class SSCircularView: UIView {
         startLbl.text = globalPreferences.data.startText
         endLbl.text = globalPreferences.data.endText
         centerLbl.text = globalPreferences.data.centerText
+        centerLbl.font = globalPreferences.drawing.centerTextFontSize
+        centerLbl.textColor = globalPreferences.drawing.centerTextFontColor
+        centerLbl.textAlignment = .center
         
         self.addSubview(startLbl)
         self.addSubview(endLbl)
+        self.addSubview(centerLbl)
     }
     
     private func setLabelsFrame(frame: CGRect, position: ArcPosition = .bottom) {
-        print("setLabelsFrame called for position:", position)
+        
         let w: CGFloat = 50.0
-        let h: CGFloat = 30.0
+        let h: CGFloat = 30.0                
+        
+        let orgX = (frame.size.width - (2 * w)) / 2
+        let orgY = (frame.size.height - (2 * h)) / 2
+        centerLbl.frame = CGRect(x: orgX, y: orgY, width: 2 * w, height: 2 * h)
         
         switch position {
         case .bottom:
             
-            startLbl.frame = CGRect.init(x: frame.maxX / 2, y: frame.maxY, width: w, height: h)
-            endLbl.frame = CGRect.init(x: frame.maxX, y: frame.maxY / 2, width: w, height: h)
+            startLbl.frame = CGRect(x: frame.maxX / 2, y: frame.maxY, width: w, height: h)
+            endLbl.frame = CGRect(x: frame.maxX, y: frame.maxY / 2, width: w, height: h)
             
             startLbl.isHidden = false
             endLbl.isHidden = false
-            
-            print("Frame of Circular View:", self.frame)
-            print("label frame set: ", startLbl.frame, endLbl.frame)
         default:
             break
         }
@@ -136,12 +136,6 @@ class SSCircularView: UIView {
         
         shapeLayer.add(basicAnimation, forKey: "basicAnimation")
     }
-    
-//    private func getBeizerPath() -> UIBezierPath {
-//        let path = UIBezierPath(arcCenter: globalPreferences.drawing.center, radius: 100.0, startAngle: globalPreferences.positioning.startAngle(), endAngle: globalPreferences.positioning.endAngle(600), clockwise: globalPreferences.drawing.clockwise)
-//
-//        return path
-//    }
 }
 
 extension SSCircularView: CAAnimationDelegate {
