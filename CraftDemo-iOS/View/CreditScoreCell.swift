@@ -84,7 +84,7 @@ class CreditScoreCell: UITableViewCell {
 
             let shadowShape = CAShapeLayer()
             shadowShape.path = shadowPath
-            shadowShape.fillColor = UIColor.gray.withAlphaComponent(0.3).cgColor
+            shadowShape.fillColor = UIColor.gray.withAlphaComponent(0.1).cgColor
             arrowView.layer.insertSublayer(shadowShape, at: 0)
         }
     }

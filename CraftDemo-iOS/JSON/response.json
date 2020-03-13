@@ -1,18 +1,18 @@
 {
-    "score": 600,
+    "score": 820,
     "start": "300",
     "end": "900",
     "date": "",
     "ranges": [{
         "percentage": "19",
-        "startRange": 300,
-        "endRange": 699,
+        "startRange": 825,
+        "endRange": 900,
         "hex": "#B7CC7C"
     },
     {
-        "percentage": "21",
-        "startRange": 700,
-        "endRange": 774,
+        "percentage": "20",
+        "startRange": 800,
+        "endRange": 824,
         "hex": "#DBBA5F"
     },
     {
@@ -22,15 +22,15 @@
         "hex": "#CE8D50"
     },
     {
-        "percentage": "20",
-        "startRange": 800,
-        "endRange": 824,
+        "percentage": "21",
+        "startRange": 700,
+        "endRange": 774,
         "hex": "#C46641"
     },
     {
         "percentage": "19",
-        "startRange": 825,
-        "endRange": 900,
+        "startRange": 300,
+        "endRange": 699,
         "hex": "#C0543D"
     }]
 }

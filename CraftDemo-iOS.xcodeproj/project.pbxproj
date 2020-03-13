@@ -124,7 +124,7 @@
 				2B44656824193188001258B5 /* Model */,
 				2B44656724193188001258B5 /* View */,
 				2B446561241930D5001258B5 /* JSON */,
-				2B446560241930D5001258B5 /* Utility */,
+				2B446560241930D5001258B5 /* Helpers */,
 				2B44655E24192B5B001258B5 /* LibraryComponent */,
 				2B44653224192AD6001258B5 /* Main.storyboard */,
 				2B44653524192AD8001258B5 /* Assets.xcassets */,
@@ -155,22 +155,22 @@
 		2B44655E24192B5B001258B5 /* LibraryComponent */ = {
 			isa = PBXGroup;
 			children = (
+				2B44657524194464001258B5 /* Utility.swift */,
 				2B4465712419357A001258B5 /* SSCircularView.swift */,
 			);
 			path = LibraryComponent;
 			sourceTree = "<group>";
 		};
-		2B446560241930D5001258B5 /* Utility */ = {
+		2B446560241930D5001258B5 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				2B446573241943D7001258B5 /* Enums.swift */,
-				2B44657524194464001258B5 /* Utility.swift */,
 				2B44657924195BA5001258B5 /* JSONManager.swift */,
 				2B44657D241B568C001258B5 /* DataManager.swift */,
 				2B44657F241B56B4001258B5 /* Protocols.swift */,
 				482917C7241C238C005DCE35 /* Extensions.swift */,
 			);
-			path = Utility;
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		2B446561241930D5001258B5 /* JSON */ = {
