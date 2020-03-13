@@ -21,6 +21,9 @@
 		2B44657624194464001258B5 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B44657524194464001258B5 /* Utility.swift */; };
 		2B44657824195B05001258B5 /* response.json in Resources */ = {isa = PBXBuildFile; fileRef = 2B44657724195B05001258B5 /* response.json */; };
 		2B44657A24195BA5001258B5 /* JSONManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B44657924195BA5001258B5 /* JSONManager.swift */; };
+		2B44657C241B5668001258B5 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B44657B241B5668001258B5 /* ViewModel.swift */; };
+		2B44657E241B568C001258B5 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B44657D241B568C001258B5 /* DataManager.swift */; };
+		2B446580241B56B4001258B5 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B44657F241B56B4001258B5 /* Protocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,9 @@
 		2B44657524194464001258B5 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		2B44657724195B05001258B5 /* response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = response.json; sourceTree = "<group>"; };
 		2B44657924195BA5001258B5 /* JSONManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONManager.swift; sourceTree = "<group>"; };
+		2B44657B241B5668001258B5 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		2B44657D241B568C001258B5 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		2B44657F241B56B4001258B5 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +164,8 @@
 				2B446573241943D7001258B5 /* Enums.swift */,
 				2B44657524194464001258B5 /* Utility.swift */,
 				2B44657924195BA5001258B5 /* JSONManager.swift */,
+				2B44657D241B568C001258B5 /* DataManager.swift */,
+				2B44657F241B56B4001258B5 /* Protocols.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -174,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				2B44656624193188001258B5 /* ViewController.swift */,
+				2B44657B241B5668001258B5 /* ViewModel.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -335,6 +344,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B44657624194464001258B5 /* Utility.swift in Sources */,
+				2B44657E241B568C001258B5 /* DataManager.swift in Sources */,
+				2B44657C241B5668001258B5 /* ViewModel.swift in Sources */,
+				2B446580241B56B4001258B5 /* Protocols.swift in Sources */,
 				2B44657A24195BA5001258B5 /* JSONManager.swift in Sources */,
 				2B44656C24193188001258B5 /* AppDelegate.swift in Sources */,
 				2B44656B24193188001258B5 /* ViewController.swift in Sources */,

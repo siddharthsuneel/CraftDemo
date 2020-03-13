@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 struct CreditModel: Codable {
-    var score: Int?
+    var score: Double?
     var start: String?
     var end: String?
     var date: String?
@@ -20,8 +20,8 @@ struct CreditModel: Codable {
 
 struct CreditRangeModel: Codable {
     var percentage: String?
-    var startRange: Int?
-    var endRange: Int?
+    var startRange: Double?
+    var endRange: Double?
     var hex: String?
     
     func getRangeText() -> String {

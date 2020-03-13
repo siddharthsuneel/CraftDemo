@@ -16,7 +16,7 @@ struct Preferences {
         var foregroundStrokeColor   = UIColor.red
         var trackStrokeColor        = UIColor.gray.withAlphaComponent(0.2)
         var lineWidth               = CGFloat(10)
-        var lineCap                 = CAShapeLayerLineCap.round
+        var lineCap                 = CAShapeLayerLineCap.square
         var clockwise               = true
         var showTrack               = true
     }
